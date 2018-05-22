@@ -1,0 +1,13 @@
+This only has command-line instructions so far. 
+Github also has a desktop application which seems to be user friendly :)
+
+Install git
+----------------
+https://git-scm.com/downloads
+
+Copy files from the repository
+-------------------------------
+Decide where you want your folder to be, then run this command to copy the files from github
+
+git clone https://github.com/biobeth/snake_club.git
+
