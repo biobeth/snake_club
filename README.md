@@ -3,6 +3,7 @@ datasets and resources for coding club
 https://swcarpentry.github.io/python-novice-inflammation/   
 http://rosalind.info/problems/locations/   
 
-link dump
+link dump  
 https://keras.io/   
-https://developers.google.com/machine-learning/crash-course/exercises   
+https://developers.google.com/machine-learning/crash-course/exercises     
+https://github.com/amueller/introduction_to_ml_with_python
