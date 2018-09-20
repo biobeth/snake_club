@@ -1,0 +1,27 @@
+# Projects
+
+Summary of 15th September meeting to discuss project ideas
+----------------------------------------------------------
+
+We would like to make something that would allow us to demonstrate that:
+- We can write some Python code,
+- manage software-based projects,
+- use git and version control appropriately
+
+Additionally, we decided that we would like to make something that would be:
+
+- useful (preferably to the scientific community)
+- interesting
+
+Several project ideas were discussed and ranked based on difficulty, time commitment and how interested we were in the idea.
+
+The top project idea that was decided upon was 'a spell-checker/data sanitiser for bioinformatics datasets'.
+
+For next Friday (21st)
+----------------------
+
+We need to do some planning and think about a few key points:
+- Does this tool exist already?
+- What will our scope be? (Types of data, types of errors or characters)
+
+We should also get everyone that would like to contribute familiar with git and version control.
