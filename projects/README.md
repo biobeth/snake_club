@@ -1,6 +1,27 @@
 # Projects
 
-Summary of 15th September meeting to discuss project ideas
+28th September: The project is dead. Long live the project.
+-----------------------------------------------------------
+Attendance: Beth, Harry, Maddy, Riku, Shannon, Steph
+
+After changing direction last week we set up github for data visualisation project (working directory: snake_club/projects/fancy_graphs).
+
+Everyone helped come up with questions to address with data viz.
+
+- Shannon looked into setting up jupyter notebooks (and integration with git)
+- Harry started looking at pandas/dataframes in python
+- Riku organised project ideas into tasks
+- Beth set up git access for the group and uploaded datafiles
+
+21st September
+----------------------------------------------------------
+
+Had a look at datasets, realised the data-sanitising project scope was large and hard to work on collaboratively.
+
+Decided to choose a different project idea proposed last week - data visualisation of NCBI metadata.
+
+
+15th September: Meeting to discuss project ideas
 ----------------------------------------------------------
 
 We would like to make something that would allow us to demonstrate that:
@@ -17,8 +38,7 @@ Several project ideas were discussed and ranked based on difficulty, time commit
 
 The top project idea that was decided upon was 'a spell-checker/data sanitiser for bioinformatics datasets'.
 
-For next Friday (21st)
-----------------------
+For next Friday (21st):
 
 We need to do some planning and think about a few key points:
 - Does this tool exist already?
