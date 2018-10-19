@@ -1,5 +1,5 @@
 # myapp.py
-##This can be run using bokeh serve --show bokeh_pandas_example.py 
+##This can be run from command line using: bokeh serve --show bokeh_pandas_example.py
 ##This will require bokeh and pandas for python 
 ##
 
