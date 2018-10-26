@@ -5,17 +5,23 @@ import matplotlib
 import matplotlib.pyplot as plt
 import os
 
-my_file = sys.argv[1]
+summary = sys.argv[1]
+locs = sys.argv[2]
 
-# reading in initial data set:
-data_frame = pandas.read_csv(my_file, sep = '\t', header = 'infer', low_memory = False)
+# reading in initial data sets:
+data_frame = pandas.read_csv(summary, sep = '\t', header = 'infer', low_memory = False)
+lat_lon = pandas.read.csv(locs, sep='\t',header='none')
+
+#add latitude and longitude for submitters
+lat_lon.columns=['Center','lat','lon']
+df = pandas.merge(data_frame, lat_lon, on='Center')
 
 #convert release data column data type to datetime
 
-data_frame['Release Date'] = pandas.to_datetime(data_frame['Release Date'])
+df['Release Date'] = pandas.to_datetime(df['Release Date'])
 
 #set index
-data_frame.index= data_frame['Release Date']
+df.index= data_frame['Release Date']
 
 #count number of submissions at the end of each calendar year
-data_frame.resample('A').count()
+df.resample('A').count()
