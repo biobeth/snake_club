@@ -10,6 +10,33 @@ my_file = sys.argv[1]
 # reading in initial data set:
 data_frame = pandas.read_csv(my_file, sep = '\t', header = 'infer', low_memory = False)
 
+df = pandas.read_csv(my_file, sep = '\t', header = 'infer', low_memory = False)
+
+# Data cleaning
+
+# Columns to drop:
+to_drop = ['FTP Path', 'BioProject Accession', 'BioSample Accession', 'BioProject ID', 'Replicons', 'Assembly Accession']
+
+df = df.drop(to_drop, axis = 1)
+
+# there are '-' (NA) values in GC%
+for x in df['GC%']:
+    if x == '-':
+        print(x)
+
+for x in df['Genes']:
+    if x == '-':
+        print(x)
+
+for x in df['Proteins']:
+    if x == '-':
+        print(x)
+
+df[['GC%']].astype(float)
+
+df.groupby('Group').describe()
+
+
 # subsetting columns from the data set that has been read in:
 #
 # This subsets columns 1:4 and rows 1:2 :
