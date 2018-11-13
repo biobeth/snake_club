@@ -26,7 +26,7 @@ data_frame.index = data_frame['Release Date']
 
 #Group by TaxID AND 
 #count number of submissions at the end of each calendar year
-data_frame_grouped = data_frame.groupby("TaxID").resample("A").count()
+data_frame_grouped = data_frame.groupby("TaxID").resample("M").count()
 
 #What are the most popular strains? 
 
@@ -38,15 +38,19 @@ df = data_frame_grouped['Strain'].unstack("TaxID")
 top_per_year = df.idxmax(axis=1)
 top_overall = df.sum().sort_values().iloc[-15:]
 
-#from st_helper_functions
-df = remove_small_values(df, 0, 21)
+#we don't need this
+top_overall_list = list(top_overall.index)
 
-#may sort by largest num? 
 col_order = df.sum().sort_values(inplace=False).index
 df[col_order]
 
+#splits (ordered) dataframe into two parts- lowest, and highest 20 TaxIDs
+df1=np.split(df[col_order], [-20], axis=1)
+
+#Combines these dataframes, summing all small values to combine them
+final_df = pandas.concat([df1[1], df1[0].sum(axis=1)], axis=1)
 
 #Make the plot! 
-df.plot.area()
+final_df.plot.areas()
 plt.show()
 
