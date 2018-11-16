@@ -15,7 +15,8 @@ Some data exploration ideas:
 1. Manipulating data with pandas
 
 End goals:
-1. Interactive graph(s) based on the test data
+1. Interactive graph(s) on a webpage based on the test data
+  1. Geospatial map
 1. Blog post?
 1. Jupyter notebook
 
