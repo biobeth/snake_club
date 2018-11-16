@@ -30,3 +30,21 @@ def remove_small_values(df, small, large):
 	return df 
 
 
+def group_df_by(data_frame, grouping, time_interval = "M"): 
+
+	"""
+	Groups data_frame by the grouping value. 
+	grouping must be a column name of data_frame. 
+	You can also specify the time interval- default is month. 
+	(Look, I used an assert statement!)
+	"""
+
+
+	#count number of submissions every month
+	assert grouping in data_frame.columns
+	#selecting only one column speeds up function by 20-40s. Will still take 2mins
+	data_frame = data_frame.loc[:, [grouping]].groupby(grouping).resample(time_interval).count()
+	data_frame = data_frame[grouping].unstack(grouping)
+	return data_frame
+
+
